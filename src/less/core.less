@@ -1,0 +1,320 @@
+.slider {
+	display: block;
+	position: relative;
+	vertical-align: middle;
+	input {
+		display: none;
+	}
+	.tooltip.top {
+		margin-top: -36px;
+	}
+	.tooltip-inner {
+		white-space: nowrap;
+	}
+	.hide {
+		display: none;
+	}
+}
+.slider.slider-horizontal {
+	height: @height1;
+	margin-bottom: 20px;
+	width: @width1;
+	&:last-of-type {
+		margin-bottom: 0;
+	}
+	.slider-track {
+		height: @height3;
+		left: 0;
+		margin-top: -5px;
+		top: 50%;
+		width: @width1;
+	}
+	.slider-selection {
+		bottom: 0;
+		height: @height2;
+		top: 0;
+	}
+	.slider-track-low {
+		bottom: 0;
+		height: @height2;
+		top: 0;
+	}
+	.slider-track-high {
+		bottom: 0;
+		height: @height2;
+		top: 0;
+	}
+	.slider-tick {
+		margin-left: -10px;
+		margin-top: -5px;
+	}
+	.slider-handle {
+		margin-left: -10px;
+		margin-top: -5px;
+	}
+	.slider-tick.triangle {
+		border-bottom-color: @color5;
+		border-width: 0 10px 10px 10px;
+		height: @height5;
+		margin-top: 0;
+		width: @width4;
+	}
+	.slider-handle.triangle {
+		border-bottom-color: @color5;
+		border-width: 0 10px 10px 10px;
+		height: @height5;
+		margin-top: 0;
+		width: @width4;
+	}
+	.slider-tick-label-container {
+		margin-top: 20px;
+		white-space: nowrap;
+		.slider-tick-label {
+			display: inline-block;
+			padding-top: 4px;
+			text-align: center;
+		}
+	}
+}
+.slider.slider-vertical {
+	display: inline-block;
+	height: @height0;
+	margin-right: 20px;
+	width: @width2;
+	&:last-of-type {
+		margin-right: 0;
+	}
+	.slider-track {
+		height: @height2;
+		left: 50%;
+		margin-left: -5px;
+		top: 0;
+		width: @width0;
+	}
+	.slider-selection {
+		bottom: 0;
+		left: 0;
+		top: 0;
+		width: @width1;
+	}
+	.slider-track-low {
+		left: 0;
+		right: 0;
+		width: @width1;
+	}
+	.slider-track-high {
+		left: 0;
+		right: 0;
+		width: @width1;
+	}
+	.slider-tick {
+		margin-left: -5px;
+		margin-top: -10px;
+	}
+	.slider-handle {
+		margin-left: -5px;
+		margin-top: -10px;
+	}
+	.slider-tick.triangle {
+		border-left-color: @color5;
+		border-width: 10px 0 10px 10px;
+		height: @height4;
+		margin-left: 0;
+		width: @width3;
+	}
+	.slider-handle.triangle {
+		border-left-color: @color5;
+		border-width: 10px 0 10px 10px;
+		height: @height4;
+		margin-left: 0;
+		width: @width3;
+	}
+	.slider-tick-label-container {
+		white-space: nowrap;
+		.slider-tick-label {
+			padding-left: 4px;
+		}
+	}
+}
+.slider.slider-disabled {
+	.slider-handle {
+		background-image: -o-linear-gradient(top, @color10 0%, @color8 100%);
+		background-image: -webkit-linear-gradient(top, @color10 0%, @color8 100%);
+		background-image: linear-gradient(to bottom, @color10 0%, @color8 100%);
+		background-repeat: repeat-x;
+		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffdfdfdf', endColorstr='#ffbebebe', GradientType=0);
+	}
+	.slider-track {
+		background-image: -o-linear-gradient(top, @color7 0%, @color9 100%);
+		background-image: -webkit-linear-gradient(top, @color7 0%, @color9 100%);
+		background-image: linear-gradient(to bottom, @color7 0%, @color9 100%);
+		background-repeat: repeat-x;
+		cursor: not-allowed;
+		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffe5e5e5', endColorstr='#ffe9e9e9', GradientType=0);
+	}
+}
+.slider-track {
+	-moz-border-radius: 4px;
+	-moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+	-webkit-border-radius: 4px;
+	-webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+	background-color: @color12;
+	background-image: -moz-linear-gradient(top, @color4, @color0);
+	background-image: -o-linear-gradient(top, @color4, @color0);
+	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(@color4), to(@color0));
+	background-image: -webkit-linear-gradient(top, @color4, @color0);
+	background-image: linear-gradient(to bottom, @color4, @color0);
+	background-repeat: repeat-x;
+	border-radius: 4px;
+	box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+	cursor: pointer;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fff0f0f0', endColorstr='@color6f9', GradientType=0);
+	position: absolute;
+}
+.slider-selection {
+	-moz-border-radius: 4px;
+	-moz-box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);
+	-moz-box-sizing: border-box;
+	-webkit-border-radius: 4px;
+	-webkit-box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);
+	-webkit-box-sizing: border-box;
+	background-color: @color12;
+	background-image: -moz-linear-gradient(top, @color0, @color1);
+	background-image: -o-linear-gradient(top, @color0, @color1);
+	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(@color0), to(@color1));
+	background-image: -webkit-linear-gradient(top, @color0, @color1);
+	background-image: linear-gradient(to bottom, @color0, @color1);
+	background-repeat: repeat-x;
+	border-radius: 4px;
+	box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);
+	box-sizing: border-box;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@color6f9', endColorstr='@color14f5', GradientType=0);
+	position: absolute;
+}
+.slider-selection.tick-slider-selection {
+	background-image: -o-linear-gradient(top, @color2 0%, @color3 100%);
+	background-image: -webkit-linear-gradient(top, @color2 0%, @color3 100%);
+	background-image: linear-gradient(to bottom, @color2 0%, @color3 100%);
+	background-repeat: repeat-x;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@color11ef', endColorstr='@color15de', GradientType=0);
+}
+.slider-track-low {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	background: transparent;
+	border-radius: 4px;
+	box-sizing: border-box;
+	position: absolute;
+}
+.slider-track-high {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	background: transparent;
+	border-radius: 4px;
+	box-sizing: border-box;
+	position: absolute;
+}
+.slider-handle {
+	-moz-box-shadow: inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.05);
+	-webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.05);
+	background-color: #444444;
+	border: 0px solid transparent;
+	box-shadow: inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.05);
+	height: @height1;
+	opacity: 1;
+	position: absolute;
+	width: @width2;
+}
+.slider-handle.round {
+	-moz-border-radius: 20px;
+	-webkit-border-radius: 20px;
+	border-radius: 20px;
+}
+.slider-handle.triangle {
+	background: transparent none;
+}
+.slider-handle.custom {
+	background: transparent none;
+	&::before {
+		color: @color13;
+		content: '\2605';
+		font-size: 20px;
+		line-height: @height1;
+	}
+}
+.slider-tick {
+	-moz-box-sizing: border-box;
+	-webkit-box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);
+	-webkit-box-sizing: border-box;
+	background-image: -o-linear-gradient(top, @color0 0%, @color1 100%);
+	background-image: -webkit-linear-gradient(top, @color0 0%, @color1 100%);
+	background-image: linear-gradient(to bottom, @color0 0%, @color1 100%);
+	background-repeat: repeat-x;
+	border: 0px solid transparent;
+	box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);
+	box-sizing: border-box;
+	filter: none;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@color6f9', endColorstr='@color14f5', GradientType=0);
+	height: @height1;
+	opacity: 0.8;
+	position: absolute;
+	width: @width2;
+}
+.slider-tick.round {
+	border-radius: 50%;
+}
+.slider-tick.triangle {
+	background: transparent none;
+}
+.slider-tick.custom {
+	background: transparent none;
+	&::before {
+		color: @color13;
+		content: '\2605';
+		font-size: 20px;
+		line-height: @height1;
+	}
+}
+.slider-tick.in-selection {
+	background-image: -o-linear-gradient(top, @color2 0%, @color3 100%);
+	background-image: -webkit-linear-gradient(top, @color2 0%, @color3 100%);
+	background-image: linear-gradient(to bottom, @color2 0%, @color3 100%);
+	background-repeat: repeat-x;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@color11ef', endColorstr='@color15de', GradientType=0);
+	opacity: 1;
+}
+.slider-disabled {
+	.slider-selection {
+		opacity: 0.5;
+	}
+}
+#red {
+	.slider-selection {
+		background: #f56954;
+	}
+}
+#blue {
+	.slider-selection {
+		background: #3c8dbc;
+	}
+}
+#green {
+	.slider-selection {
+		background: #00a65a;
+	}
+}
+#yellow {
+	.slider-selection {
+		background: #f39c12;
+	}
+}
+#aqua {
+	.slider-selection {
+		background: #00c0ef;
+	}
+}
+#purple {
+	.slider-selection {
+		background: #932ab6;
+	}
+}

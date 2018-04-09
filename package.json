@@ -1,0 +1,30 @@
+{
+  "name": "bootstrap-slider",
+  "version": "1.0.0",
+  "description": "Slider for Twitter Bootstrap",
+  "main": "src/dist/bootstrap-slider.js",
+  "style": "src/dist/bootstrap-slider.css",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "homepage": "https://github.com/allanjhonne/bootstrap-slider",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/allanjhonne/bootstrap-slider.git"
+  },
+  "keywords": [
+    "slider",
+    "bootstrap",
+    "slide",
+    "bootstrap-slider"
+  ],
+  "author": "bootstrap-slider",
+  "contributors": [
+    {
+      "name": "Alan Oliveira",
+      "github": "allanjhonne"
+    }
+  ],
+  "license": "MIT",
+  "readmeFilename": "README.md"
+}
